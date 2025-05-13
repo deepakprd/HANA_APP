@@ -1,0 +1,114 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'PoId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'PoId'
+annotate view ZC_SALES_ORDER_DR with
+{
+  @EndUserText.label: 'PoId'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'PoId'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'PoId'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  PoId;
+  
+  @EndUserText.label: 'VendorName'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'VendorName'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'VendorName'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  VendorName;
+  
+  @EndUserText.label: 'PuchaseOrg'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'PuchaseOrg'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'PuchaseOrg'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  PuchaseOrg;
+  
+  @EndUserText.label: 'GrossAmount'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'GrossAmount'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'GrossAmount'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  GrossAmount;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  CretedBy;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  CreatedOn;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  LastChangedAt;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  LocalLastChangedAt;
+}

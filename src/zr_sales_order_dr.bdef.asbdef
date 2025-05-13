@@ -1,0 +1,45 @@
+managed implementation in class ZBP_R_SALES_ORDER_DR unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_SALES_ORDER_DR alias ZrSalesOrderDr
+persistent table ZSALES_ORDER_DR
+draft table ZSALES_ORDR_DR_D
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   PoId;
+
+  field ( readonly )
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   PoId;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZSALES_ORDER_DR
+  {
+    PoId = po_id;
+    VendorName = vendor_name;
+    PuchaseOrg = puchase_org;
+    GrossAmount = gross_amount;
+    CurCode = cur_code;
+    CretedBy = creted_by;
+    CreatedOn = created_on;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

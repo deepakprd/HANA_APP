@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_SALES_ORDER_DR'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_SALES_ORDER_DR'
+  }
+}
+define service ZUI_SALES_ORDER_DR_O4 provider contracts odata_v4_ui {
+  expose ZC_SALES_ORDER_DR;
+}

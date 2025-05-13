@@ -1,0 +1,17 @@
+projection implementation in class ZBP_C_SALES_ORDER_DR unique;
+strict ( 2 );
+use draft;
+define behavior for ZC_SALES_ORDER_DR alias ZcSalesOrderDr
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+}
